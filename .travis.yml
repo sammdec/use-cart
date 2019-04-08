@@ -3,5 +3,5 @@ node_js:
   - v8
 cache: yarn
 script:
-  - npm test
-  - npm run coveralls
+  - yarn test
+  - yarn coveralls
