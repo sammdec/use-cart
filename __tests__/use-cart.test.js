@@ -1,5 +1,4 @@
 import { renderHook, act, cleanup } from "react-hooks-testing-library"
-import "jest-dom/extend-expect"
 
 import { CartProvider, useCart } from "../src/use-cart"
 
