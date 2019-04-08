@@ -1,0 +1,26 @@
+{
+  "dist/use-cart.umd.js": {
+    "bundled": 6854,
+    "minified": 3085,
+    "gzipped": 1228
+  },
+  "dist/use-cart.cjs.js": {
+    "bundled": 6233,
+    "minified": 3596,
+    "gzipped": 1287
+  },
+  "dist/use-cart.esm.js": {
+    "bundled": 5976,
+    "minified": 3381,
+    "gzipped": 1214,
+    "treeshaked": {
+      "rollup": {
+        "code": 42,
+        "import_statements": 38
+      },
+      "webpack": {
+        "code": 1030
+      }
+    }
+  }
+}
