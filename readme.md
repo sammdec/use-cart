@@ -72,8 +72,10 @@ const Cart = () => {
 
 ## Examples
 
-- Basic
-- Using local storage to load a saved cart
+- [Basic](https://codesandbox.io/s/v1mp6z0l20?fontsize=14)
+- [Fetching extra product data](https://codesandbox.io/s/zwl877zzl4?fontsize=14)
+- [Initial cart](https://codesandbox.io/s/9zro3wjy0y?fontsize=14)
+- [Using local storage to load initial cart](https://codesandbox.io/s/7wm873zq6j?fontsize=14)
 
 ## API
 
