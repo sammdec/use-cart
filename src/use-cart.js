@@ -5,11 +5,11 @@ const CartContext = createContext()
 export const CartProvider = ({ children, initialCart = [] }) => {
   const [state, dispatch] = useReducer(reducer, { items: initialCart })
 
-  const addItemHandler = (sku, quantity = 1) => () => {
+  const addItemHandler = (sku, quantity = 1) => {
     dispatch({ type: "ADD_ITEM", payload: { sku, quantity } })
   }
 
-  const removeItemHandler = (sku, quantity = 1) => () => {
+  const removeItemHandler = (sku, quantity = 1) => {
     dispatch({ type: "REMOVE_ITEM", payload: { sku, quantity } })
   }
 
@@ -18,12 +18,14 @@ export const CartProvider = ({ children, initialCart = [] }) => {
     0
   )
 
-  const removeLineItemHandler = sku => () => {
+  const removeLineItemHandler = sku => {
     dispatch({ type: "REMOVE_LINE_ITEM", payload: { sku } })
   }
-  const clearCartHandler = () => () => {
+
+  const clearCartHandler = () => {
     dispatch({ type: "CLEAR_CART" })
   }
+
   const isInCartHandler = sku => {
     return state.items.some(item => item.sku === sku)
   }

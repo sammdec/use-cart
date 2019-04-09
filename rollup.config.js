@@ -19,7 +19,8 @@ export default [
         output: { comments: false },
         compress: {
           keep_infinity: true,
-          pure_getters: true
+          pure_getters: true,
+          passes: 10
         },
         warnings: true,
         ecma: 5,

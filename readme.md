@@ -41,7 +41,7 @@ const Item = () => {
   return (
     <div>
       <p>My item for sale</p>
-      <button onClick={addItem("TEST_SKU")}>Add to basket</button>
+      <button onClick={() => addItem("TEST_SKU")}>Add to basket</button>
     </div>
   )
 }
@@ -55,9 +55,13 @@ const Cart = () => {
       {items.map(item => (
         <div>
           {item.sku} - {item.quantity}{" "}
-          <Button onClick={addItem(item.sku)}>Increase Quantity</Button>
-          <Button onClick={removeItem(item.sku)}>Decrease Quantity</Button>
-          <Button onClick={removeLineItem(item.sku)}>Remove from cart</Button>
+          <Button onClick={() => addItem(item.sku)}>Increase Quantity</Button>
+          <Button onClick={() => removeItem(item.sku)}>
+            Decrease Quantity
+          </Button>
+          <Button onClick={() => removeLineItem(item.sku)}>
+            Remove from cart
+          </Button>
         </div>
       ))}
       <Button onClick={clearCart}>Clear Cart</Button>
