@@ -27,7 +27,12 @@ export const CartProvider = ({ children, initialCart = [] }) => {
   }
 
   const isInCartHandler = sku => {
-    return state.items.some(item => item.sku === sku)
+    const item = getItemHandler(sku)
+    return item ? true : false
+  }
+
+  const getItemHandler = sku => {
+    return state.items.find(item => item.sku === sku)
   }
 
   return (
@@ -40,7 +45,8 @@ export const CartProvider = ({ children, initialCart = [] }) => {
         removeItem: removeItemHandler,
         removeLineItem: removeLineItemHandler,
         clearCart: clearCartHandler,
-        isInCart: isInCartHandler
+        isInCart: isInCartHandler,
+        getItem: getItemHandler
       }}
     >
       {children}

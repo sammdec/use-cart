@@ -209,5 +209,34 @@ describe("useCart()", () => {
 
       expect(result.current.isInCart("TEST_SKU_0")).toBe(true)
     })
+
+    test("returns false if sku is not found in cart object", () => {
+      const { result } = renderHook(() => useCart(), { wrapper: CartProvider })
+
+      act(() => result.current.addItem("TEST_SKU_0", 1))
+
+      expect(result.current.isInCart("TEST_SKU_2")).toBe(false)
+    })
+  })
+
+  describe("getItem", () => {
+    test("returns item object", () => {
+      const { result } = renderHook(() => useCart(), { wrapper: CartProvider })
+
+      act(() => result.current.addItem("TEST_SKU_0", 1))
+
+      expect(result.current.getItem("TEST_SKU_0")).toEqual({
+        quantity: 1,
+        sku: "TEST_SKU_0"
+      })
+    })
+
+    test("returns undefined if sku is not found in cart object", () => {
+      const { result } = renderHook(() => useCart(), { wrapper: CartProvider })
+
+      act(() => result.current.addItem("TEST_SKU_0", 1))
+
+      expect(result.current.getItem("TEST_SKU_2")).toBe(undefined)
+    })
   })
 })

@@ -100,10 +100,11 @@ The main hook must be wrapped with the `CartProvider` component at some point in
 Object containing:
 
 - `addItem(sku, [quantity=1]): Function` - takes a sku an optional quantity (defaults to 1) to add to the cart
-- `removeItem(sku, [quantity=1]): Function` - removes an item from the cart defaults to a quantity of 1.
+- `removeItem(sku, [quantity=1]): Function` - removes an item from the cart defaults to a quantity of 1
 - `removeLineItem(sku): Function` - removes an entire line item from the cart
 - `clearCart(): Function` - removes all items from the cart
 - `isInCart(sku): Function` - returns `true` if sku is present in the cart otherwise `false`
+- `getItem(sku): Function` - method to get a single item from the cart object by its sku
 - `items: Array` - array of objects containing a minimum of `sku` and `quantity` properties on each object
 - `lineItemsCount: Number` - returns number of unique line items n the cart
 - `totalItemsCount: Number` - returns number of all quantities of line items combined
@@ -167,6 +168,20 @@ Allows you to quickly check if a item with the given sku is present in the cart
 #### Returns
 
 `(boolean)`: Returns `true` if the sku exists in the cart
+
+---
+
+### `getItem(sku)`
+
+A convenience function to get a single item object from the cart using the items sku
+
+#### Arguments
+
+`sku (String)`: The unique item sku that identifies the item in the cart
+
+#### Returns
+
+`(object | undefined)`: Returns the item object if a matching sku is found, else `undefined`
 
 ---
 
