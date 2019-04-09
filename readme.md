@@ -2,9 +2,13 @@
 
 > A tiny react hook for creating a e-commerce cart in your app
 
-<a href="https://travis-ci.org/samjbmason/use-cart"><img alt="Build Status" src="https://travis-ci.org/samjbmason/use-cart.svg?branch=master"/></a>
+<a href="https://travis-ci.org/samjbmason/use-cart"><img alt="Build Status" src="https://img.shields.io/travis/samjbmason/use-cart.svg?style=flat-square"/></a>
 
-<a href="https://coveralls.io/github/samjbmason/use-cart?branch=master"><img alt="Coverage Status" src="https://coveralls.io/repos/github/samjbmason/use-cart/badge.svg?branch=master"/></a>
+<a href="https://coveralls.io/github/samjbmason/use-cart?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/samjbmason/use-cart.svg?style=flat-square"/></a>
+
+<a href="https://github.com/samjbmason/use-cart"><img alt="dependencies" src="https://img.shields.io/david/samjbmason/use-cart.svg?style=flat-square"/></a>
+
+<a href="https://bundlephobia.com/result?p=use-cart"><img alt="package size" src="https://img.shields.io/bundlephobia/min/use-cart.svg?style=flat-square"/></a>
 
 ## Installation
 
