@@ -3,13 +3,10 @@ const addItemReducer = (state, action) => {
     item => item.sku === action.payload.sku
   )
 
-  // This feels like it could be nicer
   if (existingItemIndex > -1) {
-    return state.items.map((item, i) => {
-      if (i === existingItemIndex) {
-        return { ...item, quantity: item.quantity + action.payload.quantity }
-      }
-    })
+    const newState = [...state.items]
+    newState[existingItemIndex].quantity += action.payload.quantity
+    return newState
   }
   return [...state.items, action.payload]
 }
