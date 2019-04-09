@@ -5,14 +5,14 @@
     "gzipped": 1228
   },
   "dist/use-cart.cjs.js": {
-    "bundled": 6156,
-    "minified": 3570,
-    "gzipped": 1279
+    "bundled": 5982,
+    "minified": 3494,
+    "gzipped": 1273
   },
   "dist/use-cart.esm.js": {
-    "bundled": 5899,
-    "minified": 3355,
-    "gzipped": 1203,
+    "bundled": 5725,
+    "minified": 3279,
+    "gzipped": 1199,
     "treeshaked": {
       "rollup": {
         "code": 42,
