@@ -183,3 +183,9 @@ Allows you to quickly check if a item with the given sku is present in the cart
 ### `totalItemsCount`
 
 `(number)`: The number of all the quantities from all the sku's in the cart
+
+---
+
+MIT License.
+
+---
