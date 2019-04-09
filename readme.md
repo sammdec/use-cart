@@ -1,4 +1,4 @@
-# `use-state`
+# `use-cart`
 
 > A tiny react hook for creating a e-commerce cart in your app
 
