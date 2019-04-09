@@ -1,6 +1,6 @@
 {
   "name": "use-cart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A  tiny react library for integrating an e-commerce cart into your app.",
   "repository": "samjbmason/use-cart",
   "homepage": "https://github.com/samjbmason/use-cart#readme",
