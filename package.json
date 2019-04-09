@@ -15,7 +15,6 @@
   ],
   "main": "dist/use-cart.cjs.js",
   "module": "dist/use-cart.esm.js",
-  "browser": "dist/use-cart.umd.js",
   "files": [
     "dist"
   ],
