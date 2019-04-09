@@ -1,8 +1,22 @@
+import React from "react"
 import { renderHook, act, cleanup } from "react-hooks-testing-library"
 
 import { CartProvider, useCart } from "../src/use-cart"
 
 afterEach(cleanup)
+
+describe("<CartProvider>", () => {
+  test("given a default state will use that instead of empty array", () => {
+    const initialCart = [{ sku: "TEST_SKU_0", quantity: 2 }]
+    const StatefulCartProvider = ({ children }) => (
+      <CartProvider initialCart={initialCart}>{children}</CartProvider>
+    )
+    const { result } = renderHook(() => useCart(), {
+      wrapper: StatefulCartProvider
+    })
+    expect(result.current.items).toEqual(initialCart)
+  })
+})
 
 describe("useCart()", () => {
   describe("items", () => {

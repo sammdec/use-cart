@@ -2,8 +2,8 @@ import React, { useReducer, useContext, createContext } from "react"
 import { reducer } from "./reducer"
 const CartContext = createContext()
 
-export const CartProvider = ({ children, defaultState = { items: [] } }) => {
-  const [state, dispatch] = useReducer(reducer, defaultState)
+export const CartProvider = ({ children, initialCart = [] }) => {
+  const [state, dispatch] = useReducer(reducer, { items: initialCart })
 
   const addItemHandler = (sku, quantity = 1) => () => {
     dispatch({ type: "ADD_ITEM", payload: { sku, quantity } })

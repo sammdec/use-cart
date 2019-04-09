@@ -79,7 +79,7 @@ Passes the cart object to the `useCart` hook
 
 #### Props
 
-`initialState (Array|Object)`: initial state that the cart will contain on initial render
+`initialCart (Array)`: initial state that the cart will contain on initial render, it must be an array of objects
 
 `children (React.ReactNode)`: react component, usually containing the rest of your app
 
