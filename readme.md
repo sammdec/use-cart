@@ -79,12 +79,17 @@ const Cart = () => {
 
 ### `<CartProvider>`
 
+Passes the cart object to the `useCart` hook
+
 #### Props
 
-- `initialState: Array|Object` - initial state that the cart will contain on initial render
-- `children: React.ReactNode` - react component, usually containing the rest of your app
+`initialState (Array|Object)`: initial state that the cart will contain on initial render
+
+`children (React.ReactNode)`: react component, usually containing the rest of your app
 
 ### `useStore()`
+
+The main hook must be wrapped with the `CartProvider` component at some point in the ancestor tree
 
 #### Returns
 
@@ -99,7 +104,9 @@ Object containing:
 - `lineItemsCount: Number` - returns number of unique line items n the cart
 - `totalItemsCount: Number` - returns number of all quantities of line items combined
 
-### Detailed API from the returned object above
+---
+
+### Detailed API from `useCart` object
 
 ### `addItem(sku, [quantity=1])`
 
@@ -108,6 +115,7 @@ This method adds an item to the cart identified by its sku, if you would like to
 #### Arguments
 
 `sku (String)`: The unique item sku that identifies the item in the cart
+
 `[quantity=1] (Number)`: The quantity added to the cart
 
 #### Returns
@@ -123,6 +131,7 @@ Removes a quantity from an item in the cart if this number drops to 0 the line i
 #### Arguments
 
 `sku (String)`: The unique item sku that identifies the item in the cart
+
 `[quantity=1] (Number)`: The quantity removed from the cart
 
 #### Returns
