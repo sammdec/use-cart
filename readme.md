@@ -4,6 +4,8 @@
 
 <a href="https://www.npmjs.com/package/use-cart"><img alt="npm version" src="https://img.shields.io/npm/v/use-cart.svg?style=flat-square"/></a> <a href="https://travis-ci.org/samjbmason/use-cart"><img alt="Build Status" src="https://img.shields.io/travis/samjbmason/use-cart.svg?style=flat-square"/></a> <a href="https://coveralls.io/github/samjbmason/use-cart?branch=master"><img alt="Coverage Status" src="https://img.shields.io/coveralls/github/samjbmason/use-cart.svg?style=flat-square"/></a> <a href="https://github.com/samjbmason/use-cart"><img alt="dependencies" src="https://img.shields.io/david/samjbmason/use-cart.svg?style=flat-square"/></a> <a href="https://bundlephobia.com/result?p=use-cart"><img alt="package size" src="https://img.shields.io/bundlephobia/min/use-cart.svg?style=flat-square"/></a>
 
+Using e-commerce carts in React are sometimes way to bloated and come with strong opinions on styling, `use-cart` gets out your way and gives you the building blocks to build in shopping cart functionality into your react app.
+
 ## Installation
 
 > Note: please ensure you install versions >= 16.8.0 for both react and react-dom, as this library depends on the new hooks feature
