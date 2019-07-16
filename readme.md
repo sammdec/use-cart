@@ -91,7 +91,7 @@ Passes the cart object to the `useCart` hook
 
 `children (React.ReactNode)`: react component, usually containing the rest of your app
 
-### `useStore()`
+### `useCart()`
 
 The main hook must be wrapped with the `CartProvider` component at some point in the ancestor tree
 
@@ -106,7 +106,7 @@ Object containing:
 - `isInCart(sku): Function` - returns `true` if sku is present in the cart otherwise `false`
 - `items: Array` - array of objects containing a minimum of `sku` and `quantity` properties on each object
 - `lineItemsCount: Number` - returns number of unique line items n the cart
-- `totalItemsCount: Number` - returns number of all quantities of line items combined
+- `itemsCount: Number` - returns number of all quantities of line items combined
 
 ## Detailed API from `useCart` object
 
@@ -182,7 +182,7 @@ Allows you to quickly check if a item with the given sku is present in the cart
 
 ---
 
-### `totalItemsCount`
+### `itemsCount`
 
 `(number)`: The number of all the quantities from all the sku's in the cart
 
